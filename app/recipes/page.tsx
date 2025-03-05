@@ -14,11 +14,9 @@ interface RecipesPageProps {
 export default async function Recipes({ searchParams }: RecipesPageProps) {
     const { searchQuery = '', cuisine = '', maxReadyTime } = await searchParams;
 
-
-    const recipes = await fetchRecipes(searchQuery, cuisine, maxReadyTime ? parseInt(maxReadyTime) : undefined)
+    const recipes = await fetchRecipes(searchQuery, cuisine, maxReadyTime)
     return (<div>
         <RecipesList recipes={recipes} />
-
     </div>
     );
 };

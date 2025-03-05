@@ -52,13 +52,14 @@ const SearchForm = () => {
                     id="cuisine"
                     value={cuisine}
                     onChange={handleCuisineChange}
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 "
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 appearance-none"
                 >
-                    <option value="">Select Cuisine</option>
-                    <option value="Italian">Italian</option>
-                    <option value="Mexican">Mexican</option>
-                    <option value="Chinese">Chinese</option>
+                    <option value="" className="text-gray-500">Select Cuisine</option>
+                    <option value="Italian" className="text-gray-800">Italian</option>
+                    <option value="Mexican" className="text-gray-800">Mexican</option>
+                    <option value="Chinese" className="text-gray-800">Chinese</option>
                 </select>
+
             </div>
 
             <div>

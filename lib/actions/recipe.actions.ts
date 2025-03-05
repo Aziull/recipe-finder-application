@@ -20,9 +20,9 @@ const fetchData = async (url: string, options = {}) => {
 };
 
 export const fetchRecipes = async (
-    query: string,
-    cuisine: string,
-    maxReadyTime?: number,
+    query?: string,
+    cuisine?: string,
+    maxReadyTime?: string,
     offset: number = 0
 ): Promise<any[]> => {
     const url = `${BASE_URL}/complexSearch?query=${query}&cuisine=${cuisine}&maxReadyTime=${maxReadyTime}&apiKey=${API_KEY}&offset=${offset}`;
