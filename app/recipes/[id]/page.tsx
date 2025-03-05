@@ -1,4 +1,5 @@
 import { fetchRecipeDetails } from "@/lib/actions/recipe.actions";
+import Image from "next/image";
 
 export default async function Recipe({ params }: { params: { id: string } }) {
     const { id } = await params;
@@ -7,7 +8,7 @@ export default async function Recipe({ params }: { params: { id: string } }) {
     return (
         <div>
             <div className="flex justify-between gap-x-12">
-                <img
+                <Image
                     src={recipe.image}
                     alt={recipe.title}
                     className="w-full max-w-2xl  rounded-xl shadow-lg mb-6"
@@ -24,7 +25,7 @@ export default async function Recipe({ params }: { params: { id: string } }) {
             <div className="mb-8">
                 <h2 className="text-3xl font-semibold mb-4">Ingredients</h2>
                 <ul className="list-disc list-inside space-y-2 grid grid-cols-1 md:grid-cols-2">
-                    {recipe.extendedIngredients.map((ingredient: any) => (
+                    {recipe.extendedIngredients.map((ingredient: { id: string; original: string }) => (
                         <li key={ingredient.id} className="text-lg">{ingredient.original}</li>
                     ))}
                 </ul>
