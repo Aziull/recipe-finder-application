@@ -29,6 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 1. Navigate to the home page:
 
 The search page will appear. On it, you can enter the recipe query, choose the cuisine, and specify the maximum preparation time.
+
 2. Search for recipes:
 
 - After entering the desired search parameters, click the "Next" button to see a list of recipes.
